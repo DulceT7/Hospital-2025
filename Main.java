@@ -1,16 +1,31 @@
-import javax.swing.JFrame;                  // Clase para crear una ventana
-import javax.swing.JLabel;                  // Clase para mostrar texto
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Dimension;
+
+import javax.swing.*;
+import vistas.LoginPanel;
 
 public class Main {
     public static void main(String[] args) {
 
+        // Ventana
         JFrame miVentana = new JFrame();    // Crea una nueva ventana vacía
         miVentana.setTitle("Hospital SCL"); // Título que aparece en la parte superior
         miVentana.setSize(1000, 800);       // Establece el tamaño de la ventana (ancho x alto)
+        miVentana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        miVentana.setLayout(new BorderLayout());
 
-        JLabel texto = new JLabel();        // Crea un componente de texto (etiqueta)
-        texto.setText("Hola chikas");       // Texto que se mostrará en la ventana
-        miVentana.add(texto);               // Añade el texto a la ventana
+        // Panel Banner
+        JPanel panelBanner = new JPanel();
+        panelBanner.setPreferredSize(new Dimension(500,800));
+        panelBanner.setOpaque(true);
+        panelBanner.setBackground(Color.RED);
+        miVentana.add(panelBanner);
+        miVentana.add(panelBanner,BorderLayout.WEST);
+
+        // Panel Login
+        LoginPanel panelLogin = new LoginPanel();
+        miVentana.add(panelLogin.getPanel(), BorderLayout.CENTER);
 
         miVentana.setVisible(true);         // Muestra la ventana en pantalla
     }
