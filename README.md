@@ -1,3 +1,3 @@
 # Hospital-2025
 
-![Logo](https://lh3.googleusercontent.com/drive-storage/AJQWtBOpX-m4BIPlfnU-umK_5aJA80Bag1Jmcw8DfP0Xy3WtvN9m1dGpS89WBEDR8wyUUUU_5DWKkaNKmc5d5wKzHrBHROdCMMpg3yki8BVv0W9mT0I=w1366-h590)
+![proyecto](https://github.com/user-attachments/assets/6252b9fb-e50b-48a9-a0f8-7ea2fb6f7d7a)
