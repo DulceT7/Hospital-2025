@@ -1,9 +1,8 @@
 import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Dimension;
 
 import javax.swing.*;
 import vistas.LoginPanel;
+import vistas.bannerPanel;
 
 public class Main {
     public static void main(String[] args) {
@@ -16,16 +15,12 @@ public class Main {
         miVentana.setLayout(new BorderLayout());
 
         // Panel Banner
-        JPanel panelBanner = new JPanel();
-        panelBanner.setPreferredSize(new Dimension(500,800));
-        panelBanner.setOpaque(true);
-        panelBanner.setBackground(Color.RED);
-        miVentana.add(panelBanner);
-        miVentana.add(panelBanner,BorderLayout.WEST);
+        LoginPanel loginPanel = new LoginPanel();
+        miVentana.add(loginPanel.getPanel(), BorderLayout.CENTER);
 
         // Panel Login
-        LoginPanel panelLogin = new LoginPanel();
-        miVentana.add(panelLogin.getPanel(), BorderLayout.CENTER);
+       bannerPanel bannerPanel = new bannerPanel();
+       miVentana.add(bannerPanel.getBanner(), BorderLayout.WEST);
 
         miVentana.setVisible(true);         // Muestra la ventana en pantalla
     }

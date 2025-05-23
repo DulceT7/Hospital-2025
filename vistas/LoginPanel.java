@@ -1,16 +1,11 @@
 package vistas;
+import javax.swing.*;
+
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
-
-import javax.swing.JButton;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JPasswordField;
-import javax.swing.JTextField;
-import javax.swing.SwingConstants;
 
 public class LoginPanel {
 
@@ -20,7 +15,7 @@ public class LoginPanel {
         panelLogin = new JPanel();
         panelLogin.setSize(500, 800);
         panelLogin.setOpaque(true);
-        panelLogin.setBackground(Color.PINK);
+        panelLogin.setBackground(Color.WHITE);
         panelLogin.setLayout(new GridBagLayout());
 
         // Administrador de diseño
@@ -32,8 +27,6 @@ public class LoginPanel {
         // Titulo
         JLabel titulo = new JLabel("Login");
        titulo.setHorizontalAlignment(SwingConstants.CENTER);
-        titulo.setOpaque(true);
-        titulo.setBackground(Color.CYAN);
         gbc.gridx = 0;
         gbc.gridy = 0;
         gbc.gridwidth = 0;
