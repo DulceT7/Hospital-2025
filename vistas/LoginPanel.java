@@ -1,13 +1,16 @@
 package vistas;
 import javax.swing.*;
 
+import ventanas.Dashboard;
+
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
+import java.awt.event.*;
 
-public class LoginPanel {
+public class LoginPanel{
 
     private JPanel panelLogin;
 
@@ -49,12 +52,19 @@ public class LoginPanel {
 
         // Botón
         JButton btnIngresar = new JButton("Ingresar");
-       
         gbc.gridx = 1;
         gbc.gridy = 3;
         gbc.anchor = GridBagConstraints.EAST;
         gbc.fill = GridBagConstraints.NONE;
         panelLogin.add(btnIngresar, gbc);
+
+        btnIngresar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e){
+
+                new Dashboard();
+            }
+        });
     }
 
     public JPanel getPanel(){
