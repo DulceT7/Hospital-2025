@@ -9,6 +9,7 @@ import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
 import java.awt.event.*;
+import control.LoginControler;
 
 public class LoginPanel{
 
@@ -58,11 +59,24 @@ public class LoginPanel{
         gbc.fill = GridBagConstraints.NONE;
         panelLogin.add(btnIngresar, gbc);
 
+        // Datos del usuario temporal
+        String usuario []= {"dataguite"};
+        String contrasenna []= {"gatitos123"};
+
         btnIngresar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e){
 
-                new Dashboard();
+                // Recuperar datos
+                String entradaUsuario = entradaCorreo.getText();
+                String entradaContranna = entradaContraseña.getText();  
+
+                if(new LoginControler().validacionDatos(entradaUsuario, entradaContranna)) {
+                    new Dashboard();
+                JFrame ventanaPadre = (JFrame) SwingUtilities.getWindowAncestor(panelLogin);
+                ventanaPadre.dispose();
+                }
+                
             }
         });
     }
